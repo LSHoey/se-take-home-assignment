@@ -9,6 +9,7 @@ const ORDER_PROCESS_TIME = 10000;
 
 function MainScreen() {
     const [currentBots, setCurrentBots] = useState([]);
+    const [botsId, setBotsId] = useState(0);
     const [currentOrders, setCurrentOrders] = useState([]);
 
     const newVipOrders = async (newOrderId) => {
@@ -45,7 +46,7 @@ function MainScreen() {
                     processTime: ORDER_PROCESS_TIME,
                 } : bot;
             }));
-
+            // ends of cut off active bot
         }
         // update currentOrders
         const newOrder = {
@@ -109,8 +110,9 @@ function MainScreen() {
 
     const addBot = () => {
         let idleOrder = currentOrders.find(order => order.status === 'idle') ?? null;
+        const newBotsId = botsId + 1;
         const newBot = {
-            id: (currentBots?.length ?? 0) + 1,
+            id: newBotsId,
             status: idleOrder != null ? 'processing' : 'idle',
             order: idleOrder?.id,
             processTime: idleOrder?.processTime,
@@ -126,6 +128,7 @@ function MainScreen() {
             setCurrentOrders(newOrders)
         }
         setCurrentBots([...currentBots, newBot]);
+        setBotsId(newBotsId)
     }
 
     const destroyBot = () => {

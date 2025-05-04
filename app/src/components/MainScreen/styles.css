@@ -1,0 +1,65 @@
+#mainScreenDiv {
+    height: 100%;
+    width: 100%;
+}
+
+#mainScreenPanels {
+    display: flex;
+    height: 70%;
+}
+
+#mainLeftPanel {
+    flex: 1;
+    border: 1px solid;
+    overflow: auto;
+    text-align: center;
+}
+
+#mainRightPanel {
+    flex: 1;
+    align-items: right;
+    border: 1px solid;
+    overflow: auto;
+}
+
+#bot {
+    border: 1px solid black;
+    height: 160px;
+    width: 160px;
+    margin: 10px;
+    overflow: auto;
+    font-size: 16px;
+    background-color: rgb(107, 102, 88);
+    color: white;
+}
+
+.displayFlex {
+    display: flex;
+}
+
+.align-right {
+    display: flex;
+    justify-content: end;
+}
+
+#orderDiv {
+    border: 1px solid black;
+    height: 100px;
+    align-content: center;
+    margin: 20px;
+    font-size: 18px;
+    color: white;
+}
+
+.vip {
+    background-color: rgb(243, 119, 70);
+}
+
+.idle {
+    background-color: rgb(177, 177, 197) !important;
+    color: black !important;
+}
+
+.normal {
+    background-color: rgb(29, 29, 32);
+}

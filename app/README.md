@@ -8,6 +8,9 @@ Navigate to the app folder:
 
 ### `cd app`
 
+Install any dependencies:
+### `npm install`
+
 In the project directory, you can run:
 
 ### `npm start`

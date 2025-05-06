@@ -32,7 +32,6 @@ function Bot({ id, status, currentOrder, processTime, doneOrder, timerRefs }) {
         }
         if (currentOrder !== timerRefs.current[id]?.orderId) {
             clearInterval(timerRefs.current[id]?.intervalId);
-            console.log('newwwww', processTime)
             setProcessing(processTime);
             timerFunc();
 

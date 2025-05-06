@@ -11,6 +11,7 @@ function QueuePanel({ bots, addBot, destroyBot, doneOrder }) {
                 <Button buttonText="+ Bot" onClick={addBot} />
                 <Button buttonType="btn-danger" buttonText="- Bot" onClick={() => {
                     clearInterval(timerRefs.current[bots[0]?.id]?.intervalId);
+                    delete timerRefs.current[bots[0]?.id];
                     destroyBot();
                 }} />
             </div>

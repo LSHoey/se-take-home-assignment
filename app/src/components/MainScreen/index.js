@@ -161,6 +161,8 @@ function MainScreen() {
                     processTime: ORDER_PROCESS_TIME,
                 } : bot;
             }))
+        } else {
+            setCurrentBots([]);
         }
     }
 
